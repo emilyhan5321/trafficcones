@@ -1,5 +1,6 @@
 :root {
     background-color: #FF5C00;
+    font-family: sans-serif;
 }
 
 .index {
@@ -13,7 +14,7 @@
     overflow-x:auto;
     overflow-y:hidden;
     height:80vh;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255); /*need todelete at final*/
     
 
 }
@@ -42,3 +43,55 @@
     animation: none;
 }
 
+
+.indexlink {
+    position:absolute;
+    background-color: aqua; /*need todelete at final*/
+    top: 50%; 
+    left: 50%;
+    z-index: 100000;
+    width: 20vw;
+    transform: translate(-50%, -50%);
+}
+
+.conetoindex img {
+    height: auto; 
+    width: 100%;
+    display: block;
+
+}
+
+.conetoindex {
+    position: absolute;
+    display: block;
+    width: 14.18%;
+}
+
+.conetoreading1 {
+    position:absolute;
+    background-color: gray; /*need todelete at final*/
+    top: 35.81%; 
+    left: 34.72%;
+    z-index: 100000;
+}
+
+
+.boxsix {
+    height: 600px;
+    width: 600px;
+    background-color:#fe9e6696; /*need to change at final*/
+    display: block;
+    transform: translate(70%, 50%);
+    position: inherit;
+
+}
+
+.readingsix {
+    padding: 5%;
+
+}
+
+a {
+
+    z-index: 100000;
+}
