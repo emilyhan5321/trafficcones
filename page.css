@@ -1,0 +1,28 @@
+:root {
+    background-color: #FF5C00;
+}
+
+.index {
+    flex:auto;
+    flex-direction:row;
+    gap:5vw;
+    justify-content: space-between;
+    align-items: center;
+    display:flex;
+    margin:40px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    height:80vh;
+
+
+}
+
+.coneimage {
+    height:90vh;
+    position: relative;
+    display:flex;
+    flex-shrink: 0;
+
+}
+
+
