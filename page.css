@@ -46,7 +46,6 @@
 
 .indexlink {
     position:absolute;
-    background-color: aqua; /*need todelete at final*/
     top: 50%; 
     left: 50%;
     z-index: 100000;
@@ -69,10 +68,10 @@
 
 .conetoreading1 {
     position:absolute;
-    background-color: gray; /*need todelete at final*/
-    top: 35.81%; 
-    left: 34.72%;
+    top: 35%; 
+    left: 75%;
     z-index: 100000;
+
 }
 
 
@@ -81,17 +80,45 @@
     width: 600px;
     background-color:#fe9e6696; /*need to change at final*/
     display: block;
-    transform: translate(70%, 50%);
+    transform: translate(70%, 10%);
     position: inherit;
 
 }
 
 .readingsix {
     padding: 5%;
+}
 
+.readingfour {
+    padding:5%;
+}
+
+.readingtwo {
+    padding:5%;
 }
 
 a {
 
     z-index: 100000;
+}
+
+.boxfour {
+    height: 400px;
+    width: 400px;
+    background-color:#fe9e6696; /*need to change at final*/
+    display: block;
+    transform: translate(20%, 20%);
+    position: inherit;
+
+}
+
+
+.boxtwo {
+    height: 400px;
+    width: 400px;
+    background-color:#fe9e6696; /*need to change at final*/
+    display: block;
+    transform: translate(80%, 35%);
+    position: inherit;
+
 }
