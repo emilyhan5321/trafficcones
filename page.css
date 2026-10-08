@@ -1,12 +1,14 @@
 :root {
-    background-color: #FF5C00;
     font-family: sans-serif;
+    background-color:#FF5C00;
 }
+
+
 
 .index {
     flex:auto;
     flex-direction:row;
-    gap:2vw;
+    /* gap:2vw; */
     justify-content: space-between;
     align-items: center;
     display:flex;
@@ -14,16 +16,19 @@
     overflow-x:auto;
     overflow-y:hidden;
     height:80vh;
-    background-color: rgb(255, 255, 255); /*need todelete at final*/
-    
+    padding-left:2vw;
+    padding-right:2vw;
+
 
 }
 
 .coneimage {
-    height:90vh;
+    height:90%;
     position: relative;
     display:flex;
     flex-shrink: 0;
+    cursor: move;
+
 
 }
 
@@ -122,3 +127,104 @@ a {
     position: inherit;
 
 }
+
+
+.arrowforindex {
+    z-index:1000;
+    background-color:#ffffff; /*need to change at final*/
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+
+
+
+}
+
+.imagebgcolor {
+    background-color:#ffffff; /*need to change at final*/
+
+}
+
+
+    .home {
+        position:relative;
+        width:100vw;
+        height:62vw;
+    }
+ 
+    .objectone {
+        position:absolute;
+        top:5%;
+        left:2%;
+        transform: scale(0.2);
+        height:auto;
+
+    }
+ 
+    .objecttwo {
+        position:absolute;
+        top:3%;
+        left:29%;
+        transform: scale(0.3);
+        height:auto;
+    }
+ 
+    .objectthree {
+        position:absolute;
+        top:20%;
+        left:35%;
+        transform: scale(0.3);
+        height:auto;
+
+    }
+ 
+    .objectfour {
+        position:absolute;
+        top:3%;
+        left:70%;
+        transform: scale(0.4);
+        height:auto;
+
+    }
+ 
+    .objectfive {
+        position:absolute;
+        top:36%;
+        left:60%;
+        transform: scale(0.3);
+        height:auto;
+
+    }
+ 
+    .objectsix {
+        position:absolute;
+        top:24%;
+        left:1%;
+        transform: scale(0.3);
+        height:auto;
+
+    }
+ 
+    .objectseven {
+        position:absolute;
+        top:20%;
+        left:37%;
+        transform: scale(0.4);
+        height:auto;
+
+    }
+ 
+    .objecteight {
+        position:absolute;
+        top:30%;
+        left:62%;
+        transform: scale(0.5);
+        height:auto;
+
+
+    }
+
+    .navmove {
+
+    }
