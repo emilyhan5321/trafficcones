@@ -51,11 +51,13 @@
 
 .indexlink {
     position:absolute;
-    top: 50%; 
-    left: 50%;
     z-index: 100000;
     width: 20vw;
-    transform: translate(-50%, -50%);
+    transform: scale(0.5);
+}
+.indexlink:hover {
+    animation: shake 0.3s infinite;
+
 }
 
 .conetoindex img {
@@ -147,84 +149,85 @@ a {
 }
 
 
-    .home {
-        position:relative;
-        width:100vw;
-        height:62vw;
+ .home {
+    position:relative;
+    width:100vw;
+    height:62vw;
     }
  
-    .objectone {
-        position:absolute;
-        top:5%;
-        left:2%;
-        transform: scale(0.2);
-        height:auto;
-
-    }
- 
-    .objecttwo {
-        position:absolute;
-        top:3%;
-        left:29%;
-        transform: scale(0.3);
-        height:auto;
-    }
- 
-    .objectthree {
-        position:absolute;
-        top:20%;
-        left:35%;
-        transform: scale(0.3);
-        height:auto;
+.objectone {
+    position:absolute;
+    top:5%;
+    left:2%;
+    transform: scale(0.2);
+    height:auto;
 
     }
  
-    .objectfour {
-        position:absolute;
-        top:3%;
-        left:70%;
-        transform: scale(0.4);
-        height:auto;
+.objecttwo {
+    position:absolute;
+    top:3%;
+    left:29%;
+    transform: scale(0.3);
+    height:auto;
+    }
+ 
+.objectthree {
+    position:absolute;
+    top:20%;
+    left:35%;
+    transform: scale(0.3);
+    height:auto;
 
     }
  
-    .objectfive {
-        position:absolute;
-        top:36%;
-        left:60%;
-        transform: scale(0.3);
-        height:auto;
+.objectfour {
+    position:absolute;
+    top:3%;
+    left:70%;
+    transform: scale(0.4);
+    height:auto;
 
     }
  
-    .objectsix {
-        position:absolute;
-        top:24%;
-        left:1%;
-        transform: scale(0.3);
-        height:auto;
+.objectfive {
+    position:absolute;
+    top:36%;
+ 
+    transform: scale(0.3);
+    height:auto;
 
     }
  
-    .objectseven {
-        position:absolute;
-        top:20%;
-        left:37%;
-        transform: scale(0.4);
-        height:auto;
+.objectsix {
+    position:absolute;
+    top:24%;
+    left:1%;
+    transform: scale(0.3);
+    height:auto;
 
     }
  
-    .objecteight {
-        position:absolute;
-        top:30%;
-        left:62%;
-        transform: scale(0.5);
-        height:auto;
+.objectseven {
+    position:absolute;
+    top:20%;
+    left:37%;
+    transform: scale(0.4);
+    height:auto;
+
+    }
+ 
+.objecteight {
+    position:absolute;
+    top:30%;
+    left:62%;
+    transform: scale(0.5);
+    height:auto;
 
 
     }
 
-    .navmove {
+
+.navmove {
 
     }
