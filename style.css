@@ -1,5 +1,4 @@
 :root {
-    font-family: sans-serif;
     background-color:#FF5C00;
     height:100vh;
     overflow:hidden;
@@ -74,14 +73,6 @@
     width: 14.18%;
 }
 
-.conetoreading1 {
-    position:absolute;
-    top: 35%; 
-    left: 75%;
-    z-index: 100000;
-
-}
-
 
 .boxsix {
     height: 600px;
@@ -93,13 +84,7 @@
 
 }
 
-.readingsix {
-    padding: 5%;
-}
 
-.readingfour {
-    padding:5%;
-}
 
 .readingtwo {
     padding:5%;
@@ -149,18 +134,8 @@
     height:62vw;
     }
 
-    
-.dropcone {
-    position:fixed; 
-    top:-100vh; /* hidden above the window until it falls */
-    left:0;
-    z-index:10; /* above your page content */
-    display:block;
-    height:30vh; /* cone size: 30% of the window height */
-    cursor:grab;
-    touch-action:none; /* lets dragging work on touchscreens */
 
-}
+
 
 .dropcone.dragging {
     cursor:grabbing;
@@ -292,8 +267,8 @@ img {
     position:fixed;
     z-index:20;
     padding:0.25em 0.4em;
-    background-color:#000;
-    color:#fff;
+    background-color:#000000;
+    color:#ffffff;
     font-size:3vh;
     line-height:1;
     white-space:nowrap;
@@ -301,12 +276,7 @@ img {
 
 }
 
-/* home.css â€” HOME PAGE ONLY */
 
-
-/* --u is one "size unit"
-   it is 1% of the window width OR 1.6% of the height, whichever is smaller,
-   so the cones shrink together and never overlap */
 :root {
     --u:min(1vw, 1.6vh);
 }
@@ -340,7 +310,6 @@ img {
 
 
 
-/* wiggle on hover (all cones) */
 
 @keyframes shake {
   0%   { rotate: 0deg; }
@@ -356,7 +325,6 @@ img {
 
 
 
-/* link cones: black outline that follows the cutout shape */
 
 .navlink {
     cursor:pointer;
@@ -531,16 +499,6 @@ img {
 
 }
 
-/* reading.css — READING PAGES ONLY (reading1, reading2, reading3)
-   3 white square boxes, the text scrolls inside each box
-
-   layout (fits a laptop window, about 1040px wide x 640px tall):
-
-     [ 200 ]  [         ]
-     [     ]  [   600   ]
-     [ 400 ]  [         ]
-     [     ]  [         ]
-*/
 
 
 .readingboxes {
