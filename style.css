@@ -148,6 +148,8 @@
     width:100vw;
     height:62vw;
     }
+
+    
 .dropcone {
     position:fixed; 
     top:-100vh; /* hidden above the window until it falls */
