@@ -1,8 +1,9 @@
 :root {
     font-family: sans-serif;
     background-color:#FF5C00;
+    height:100vh;
+    overflow:hidden;
 }
-
 
 
 .index {
@@ -104,11 +105,6 @@
     padding:5%;
 }
 
-a {
-
-    z-index: 100000;
-}
-
 .boxfour {
     height: 400px;
     width: 400px;
@@ -121,8 +117,8 @@ a {
 
 
 .boxtwo {
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
     background-color:#fe9e6696; /*need to change at final*/
     display: block;
     transform: translate(80%, 35%);
@@ -139,8 +135,6 @@ a {
     padding-top: 2vw;
     padding-bottom: 2vw;
 
-
-
 }
 
 .imagebgcolor {
@@ -149,85 +143,486 @@ a {
 }
 
 
- .home {
+.home {
     position:relative;
     width:100vw;
     height:62vw;
     }
- 
-.objectone {
+.dropcone {
+    position:fixed; 
+    top:-100vh; /* hidden above the window until it falls */
+    left:0;
+    z-index:10; /* above your page content */
+    display:block;
+    height:30vh; /* cone size: 30% of the window height */
+    cursor:grab;
+    touch-action:none; /* lets dragging work on touchscreens */
+
+}
+
+.dropcone.dragging {
+    cursor:grabbing;
+}
+
+.dropcone img {
+    display:block;
+    height:100%;
+    width:auto;
+    pointer-events:none;
+
+    filter:
+        drop-shadow(2px 0 0 #000)
+        drop-shadow(-2px 0 0 #000)
+        drop-shadow(0 2px 0 #000)
+        drop-shadow(0 -2px 0 #000);
+
+}
+
+
+.navlink {
+    cursor:pointer;
+}
+
+.cones div,
+.cones a {
     position:absolute;
-    top:5%;
-    left:2%;
-    transform: scale(0.2);
-    height:auto;
+    display:block;
+}
 
-    }
- 
-.objecttwo {
+.cones img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.cones {
+    position:relative;
+    width:100%;
+    height:100vh;
+}
+
+
+
+
+:root {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    background-color:#FF5C00;
+}
+
+body {
+    margin:0;
+    color:#000;
+}
+
+img {
+    -webkit-user-drag:none; /* stop the browser's own image dragging */
+    user-select:none;
+}
+
+
+
+
+
+.aboutbutton {
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:40;
+    width:30px;
+    height:30px;
+    padding:0;
+    border:0;
+    background-color:#000;
+    color:#fff;
+    font-family:inherit;
+    font-size:18px;
+    line-height:30px;
+    text-align:center;
+    cursor:pointer;
+
+}
+
+
+.aboutbox {
+    position:fixed;
+    inset:0; 
+    z-index:10000000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    box-sizing:border-box;
+    background-color:#ff5e009e; 
+
+}
+
+.aboutbox[hidden] {
+    display:none;
+}
+
+.abouttext {
+    max-width:34rem;
+    text-align:center;
+    font-size:22px;
+    line-height:1.4;
+    z-index:10000000;
+
+
+}
+
+.abouttext p {
+    margin:0 0 16px 0;
+}
+
+.aboutcredit {
+    font-size:16px;
+}
+
+.abouttext .aboutcredit {
+    margin:0;
+}
+
+
+
+/* label that follows the pointer */
+
+.pointerlabel {
+    position:fixed;
+    z-index:20;
+    padding:0.25em 0.4em;
+    background-color:#000;
+    color:#fff;
+    font-size:3vh;
+    line-height:1;
+    white-space:nowrap;
+    pointer-events:none; /* the label never blocks clicks */
+
+}
+
+/* home.css â€” HOME PAGE ONLY */
+
+
+/* --u is one "size unit"
+   it is 1% of the window width OR 1.6% of the height, whichever is smaller,
+   so the cones shrink together and never overlap */
+:root {
+    --u:min(1vw, 1.6vh);
+}
+
+.home {
+    height:100vh;
+    overflow:hidden; /* everything fits in one window: no scrolling */
+}
+
+.cones {
+    position:relative;
+    width:100%;
+    height:100vh;
+}
+
+
+
+/* every cone */
+
+.cones div,
+.cones a {
     position:absolute;
-    top:3%;
-    left:29%;
-    transform: scale(0.3);
+    display:block;
+}
+
+.cones img {
+    display:block;
+    width:100%;
     height:auto;
-    }
- 
-.objectthree {
-    position:absolute;
-    top:20%;
-    left:35%;
-    transform: scale(0.3);
-    height:auto;
+}
 
-    }
- 
-.objectfour {
-    position:absolute;
-    top:3%;
-    left:70%;
-    transform: scale(0.4);
-    height:auto;
 
-    }
- 
-.objectfive {
-    position:absolute;
-    top:36%;
- 
-    transform: scale(0.3);
-    height:auto;
 
-    }
- 
-.objectsix {
-    position:absolute;
-    top:24%;
-    left:1%;
-    transform: scale(0.3);
-    height:auto;
+/* wiggle on hover (all cones) */
 
-    }
- 
-.objectseven {
-    position:absolute;
-    top:20%;
-    left:37%;
-    transform: scale(0.4);
-    height:auto;
+@keyframes shake {
+  0%   { rotate: 0deg; }
+  25%  { rotate: -4deg; }
+  50%  { rotate: 0deg; }
+  75%  { rotate: 3deg; }
+  100% { rotate: 0deg; }
+}
 
-    }
- 
-.objecteight {
-    position:absolute;
-    top:30%;
-    left:62%;
-    transform: scale(0.5);
-    height:auto;
+.shake:hover {
+  animation: shake 0.35s infinite;
+}
 
+
+
+/* link cones: black outline that follows the cutout shape */
+
+.navlink {
+    cursor:pointer;
+}
+
+.navlink img {
+    filter:
+        drop-shadow(2px 0 0 #000)
+        drop-shadow(-2px 0 0 #000)
+        drop-shadow(0 2px 0 #000)
+        drop-shadow(0 -2px 0 #000);
+}
+
+
+
+
+/* top row */
+
+.objectone { /* taped cones */
+    left:0.8%;
+    top:0.8%;
+    width:calc(20 * var(--u));
 
     }
 
-
-.navmove {
+.objecttwo { /* workers */
+    left:23.5%;
+    top:6.7%;
+    width:calc(14.2 * var(--u));
 
     }
+
+.objectthree { /* barrel with black car: reading 2 */
+    left:40.8%;
+    top:5.3%;
+    width:calc(16.1 * var(--u));
+
+    }
+
+.objectfour { /* three cones */
+    left:58.6%;
+    top:8.3%;
+    width:calc(11.3 * var(--u));
+
+    }
+
+.objectfive { /* fedex, cut edge: top */
+    right:5%;
+    top:0;
+    width:calc(22.6 * var(--u));
+
+    }
+
+
+/* middle row */
+
+.objectsix { /* barricade, cut edge: left */
+    left:0;
+    top:38.5%;
+    width:calc(12.5 * var(--u));
+
+    }
+
+.objectseven { /* cone with white band: reading 1 */
+    left:16.1%;
+    top:46.6%;
+    width:calc(7.6 * var(--u));
+
+    }
+
+.objecteight { /* taped barrel */
+    left:26.3%;
+    top:45.1%;
+    width:calc(17.1 * var(--u));
+
+    }
+
+.objectnine { /* only orange: image index, exact center of the window */
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    width:calc(10.1 * var(--u));
+
+    }
+
+.objectten { /* hydrant */
+    left:67.6%;
+    top:40.1%;
+    width:calc(12.1 * var(--u));
+
+    }
+
+.objecteleven { /* yellow ramp, cut edge: right */
+    right:0;
+    top:39.2%;
+    width:calc(16.4 * var(--u));
+
+    }
+
+
+/* bottom row */
+
+.objecttwelve { /* man on barrel */
+    left:45.8%;
+    top:65.7%;
+    width:calc(9.9 * var(--u));
+
+    }
+
+.objectthirteen { /* people on stone: reading 3 */
+    left:57.8%;
+    top:60.9%;
+    width:calc(16.4 * var(--u));
+
+    }
+
+.objectfourteen { /* striped pole */
+    left:75.9%;
+    top:67.7%;
+    width:calc(8.8 * var(--u));
+
+    }
+
+.objectfifteen { /* sidewalk, cut edge: all sides */
+    left:0;
+    bottom:0;
+    width:calc(16.2 * var(--u));
+
+    }
+
+.objectsixteen { /* dog, cut edge: right + bottom */
+    right:0;
+    bottom:0;
+    width:calc(12.5 * var(--u));
+
+    }
+
+    .shake:hover {
+    animation: none;
+}
+
+
+
+.dropcone {
+    position:fixed; /* stays inside the window even if the page scrolls */
+    top:-100vh; /* hidden above the window until it falls */
+    left:0;
+    z-index:10; /* above your page content */
+    display:block;
+    height:30vh; /* cone size: 30% of the window height */
+    cursor:grab;
+    touch-action:none; /* lets dragging work on touchscreens */
+
+}
+
+.dropcone.dragging {
+    cursor:grabbing;
+}
+
+.dropcone img {
+    display:block;
+    height:100%;
+    width:auto;
+    pointer-events:none;
+
+    /* black outline that follows the cutout shape */
+    filter:
+        drop-shadow(2px 0 0 #000)
+        drop-shadow(-2px 0 0 #000)
+        drop-shadow(0 2px 0 #000)
+        drop-shadow(0 -2px 0 #000);
+
+}
+
+/* reading.css — READING PAGES ONLY (reading1, reading2, reading3)
+   3 white square boxes, the text scrolls inside each box
+
+   layout (fits a laptop window, about 1040px wide x 640px tall):
+
+     [ 200 ]  [         ]
+     [     ]  [   600   ]
+     [ 400 ]  [         ]
+     [     ]  [         ]
+*/
+
+
+.readingboxes {
+    display:grid;
+    grid-template-columns:400px 600px; /* left column, right column */
+    grid-template-rows:200px 400px; /* top row, bottom row */
+    gap:15px;
+    justify-content:left; /* center the whole group left/right */
+    align-content:center; /* center the whole group top/bottom */
+    min-height:100vh;
+    padding:8vh;
+    box-sizing:border-box;
+
+}
+
+
+
+/* every box */
+
+.square {
+    background-color:rgba(255, 255, 255, 0.5); /* white at 50%: the orange shows through, the text stays solid */
+    /* opacity:0.5; would fade the text too */
+    color:#000;
+    box-sizing:border-box; /* padding stays inside the 200 / 400 / 600px */
+    overflow-y:auto; /* text scrolls inside the box */
+    overflow-x:hidden;
+    font-size:16px;
+    line-height:1.5;
+
+}
+
+.square p {
+    margin:0 0 1em 0;
+}
+
+
+
+/* box sizes + where each box sits in the grid */
+
+.boxtwo { /* 200px, top of the left column */
+    width:200px;
+    height:200px;
+    grid-column:1;
+    grid-row:1;
+    justify-self:end; /* push it to the right, next to the big box */
+    padding:1vh;
+
+}
+
+.boxfour { /* 400px, bottom of the left column */
+    width:400px;
+    height:400px;
+    grid-column:1;
+    grid-row:2;
+     padding:3vh;
+
+}
+
+.boxsix { /* 600px, right column, both rows */
+    width:600px;
+    height:600px;
+    grid-column:2;
+    grid-row:1 / 3;
+    align-self:center;
+    padding:6vh;
+
+}
+
+
+
+/* small window: the grid does not fit, so stack the boxes
+   in a centered column and let the page scroll */
+
+@media (max-width:1100px), (max-height:700px) {
+
+    .readingboxes {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .square {
+        flex-shrink:0;
+    }
+
+}
+

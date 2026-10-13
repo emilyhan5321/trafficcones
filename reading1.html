@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Traffic Cones </title>
-    <link rel="stylesheet" href="page.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="/images/cutout_cone.png">
@@ -12,33 +12,108 @@
   </head>
 
   <body>
-<h1>reading page 2x2 (delete at final)</h1>
 
-    
-    <a href="home.html" > 
-    <img src="/navcones/navcone2.png" class="reading1page" id="shake">
-    </a>
+    <button class="aboutbutton" type="button" >?</button>
 
-<div class="boxtwo">
+    <div class="aboutbox" hidden>
+      <div class="abouttext">
+        <p> Inspired by
+        </br>
+        As writer Anaïs Nin discussed in her 1968 book The Novel of the Future:</br>
+  It is the function of art to renew our perception. What we are familiar with we cease to see. The writer shakes up the familiar scene, and as if by magic, we see a new meaning in it.
+</p>
+        </div>
+    </div>
+
+    <main class="pagecontent">
+    <section class="readingboxes">
+
+
+<div class="square boxtwo">
     <div class="readingtwo"> 
-        Traffic cones, also called pylons, witches' hats,road cones, highway cones, safety cones, caution cones, channelizing devices, construction cones, roadworks cones, or just cones, are usually cone-shaped markers that are placed on roads or footpaths to temporarily redirect traffic in a safe manner. They are often used to create separation or merge lanes during road construction projects or automobile accidents, although heavier, more permanent markers or signs are used if the diversion is to stay in place for a long period of time.
-
-        where do you want to be located my 6x6 box textwillcomehereeeeeeeeeehahahahahaahahahahaahahahaahahahaha그만하고싶어요</div>
-</div>
+Basics
 
 
-<div class="boxfour">
+Traffic cones, also called pylons, witches' hats, road cones, highway cones, safety cones, caution cones, channelizing devices, construction cones, roadworks cones, or just cones, are usually cone-shaped markers that are placed on roads or footpaths to temporarily redirect traffic in a safe manner. They are often used to create separation or merge lanes during road construction projects or automobile accidents, although heavier, more permanent markers or signs are used if the diversion is to stay in place for a long period of time.
+
+
+Safety signage is an essential aspect of promoting a secure work environment. To effectively convey crucial information and warnings, colors and symbols are powerful tools that tap into human psychology. Understanding the psychological effects of distinct colors and symbols is vital for designing safety messaging that captures attention, influences behavior, and helps people stay safe. Colors and symbols can affect our emotions, cognition, and actions, and their strategic implementation improves safety outcomes.
+
+
+When it comes to managing the vehicle and foot traffic around construction sites and events, few things work better than a supply of traffic safety cones. However, as many soon notice, these pieces of equipment come in a series of appearances—and not just any type of cone can be used for any need. These are some of the different traffic cone colors and what they mean for drivers as well as road workers.
+
+Color
+
+Orange Traffic Cones
+Orange traffic cones tell everyone nearby that safety hazards are present. It’s for this reason they’re most often associated with construction sites or any project having to do with the use of heavy construction materials and equipment. Though they mean there’s no immediate danger surrounding a work zone, they do represent the potential for bodily harm.
+
+Orange : Communications, alarm, signal lines, cables and conduit
+
+    </div>
+
+    </div>
+
+
+<div class="square boxfour">
     <div class="readingfour"> 
 
         no text 
 
     </div>
+</div>
 
-<div class="boxsix">
+<div class="square boxsix">
     <p class="readingsix"> 
 
-        no text here
+        no text here 
+        </p>
 
     </div>
+
+</section>
+    </main>
+
+
+    <!-- COPY INTO YOUR <body>, at the very end -->
+
+    <!-- the falling cone (click = home, drag = move) -->
+    <a class="dropcone" href="index.html" data-label="Home" aria-label="Back to home">
+    <img src="navcones/navcone18.png"
+    alt=""> <!-- cone with white band -->
+    </a>
+
+    <!-- "?" button + about box -->
+    <button class="aboutbutton" type="button" aria-label="About this project">?</button>
+
+    <div class="aboutbox" hidden>
+        <div class="abouttext">
+            <p>Traffic cones are everywhere in New York, and because they are everywhere, we stop seeing them. This site collects fifty of them, documented on the street, alongside readings on habituation, defamiliarization and the blasé city dweller.</p>
+            <p class="aboutcredit">[Your name] · Unit 1: Physical Making</p>
+        </div>
+    </div>
+    <div class="aboutbox" hidden>
+      <div class="abouttext">
+        <p>As writer Anaïs Nin discussed in her 1968 book The Novel of the Future:
+  It is the function of art to renew our perception. What we are familiar with we cease to see. The writer shakes up the familiar scene, and as if by magic, we see a new meaning in it.
+  </p>
+        </div>
+    </div>
+
+
+    <a class="dropcone" href="index.html" data-label="Home" aria-label="Back to home">
+    <img src="navcones/navcone18.png">
+    </a>
+    
+    <a href="index.html" > 
+    <img src="/navcones/navcone2.png" class="reading1page" id="shake">
+    </a>
+
+
+
+
+
+<div class="pointerlabel" hidden></div>
+<script src="script.js"></script>
+
 
   </body>
