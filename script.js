@@ -1,17 +1,4 @@
-// =========================================
-// script.js — ALL the JavaScript for the site
-// Link it at the end of <body> on every page:
-//   <script src="js/script.js"></script>
-//
-// PART 1  "?" button + about box ......... every page
-// PART 2  label that follows the pointer . every page
-// PART 3  falling, draggable cone ........ only pages that have a .dropcone
-// =========================================
 
-
-// =========================================
-// PART 1 — "?" button + about box
-// =========================================
 
 const aboutButton = document.querySelector('.aboutbutton');
 const aboutBox = document.querySelector('.aboutbox');
@@ -48,10 +35,7 @@ document.addEventListener('keydown', function (event) {
 });
 
 
-// =========================================
-// PART 2 — label that follows the pointer
-// Any element with data-label="..." shows that text on hover.
-// =========================================
+
 
 const pointerLabel = document.querySelector('.pointerlabel');
 
@@ -78,15 +62,7 @@ document.addEventListener('mouseleave', function () {
 });
 
 
-// =========================================
-// PART 3 — falling, draggable cone (image index + readings)
-//
-// 1. When the page opens, the cone falls to the bottom center
-//    of the window with a small bounce.
-// 2. You can drag it anywhere inside the window. It stays where you let go.
-// 3. A quick click (no drag) goes back to the home page.
-// 4. Every refresh or new visit starts over from the top.
-// =========================================
+
 
 const cone = document.querySelector('.dropcone');
 
@@ -106,7 +82,6 @@ if (cone) {
     let startX = 0, startY = 0;  // where the pointer was when you pressed
 
 
-    // ---------- helpers ----------
 
     // move the cone on screen
     function placeCone() {
@@ -123,7 +98,7 @@ if (cone) {
     }
 
 
-    // ---------- 1. the drop ----------
+    // ---------- the drop ----------
 
     function dropCone() {
         const ground = window.innerHeight - cone.offsetHeight;   // y when it sits on the bottom
@@ -178,7 +153,7 @@ if (cone) {
     });
 
 
-    // ---------- 2. dragging ----------
+    // ---------- dragging ----------
 
     cone.addEventListener('pointerdown', function (event) {
         if (isFalling) return;
@@ -217,7 +192,7 @@ if (cone) {
     cone.addEventListener('pointercancel', stopDragging);
 
 
-    // ---------- 3. click goes home (but not after a drag) ----------
+    // ---------- click goes home (but not after a drag) ----------
 
     cone.addEventListener('click', function (event) {
         if (isFalling || wasDragged) {
